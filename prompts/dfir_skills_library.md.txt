@@ -1,0 +1,27 @@
+# DFIR Prompt Engineering Library
+
+This document contains the specific prompts engineered to interact with the Autopsy/Cyber Triage MCP servers. They are designed to extract structured summaries without hallucinating forensic artifacts.
+
+## 1. System Initialization & Verification
+Always initialize the context to prevent cross-contamination from previous chat sessions and verify the MCP connection.
+
+**Prompt:**
+> "Do not use any memory from previous chats. Can you see the Autopsy and Cyber Triage MCP servers?"
+
+## 2. Web Activity Triage
+Used to quickly identify anomalies in browser history.
+
+**Prompt:**
+> "Can you summarize the web activity grouping by domain? Focus on anything that is not ordinary or highly suspicious."
+
+## 3. Notable Event Timeline Generation
+Used to condense thousands of logs into a readable executive timeline.
+
+**Prompt:**
+> "Can you make a timeline of the notable items? If they are similar, you can group them to reduce the size. Remember that suspicious items could be false positives."
+
+## 4. Specific Artifact Enrichment
+Used to dive deep into a specific finding identified during the initial triage.
+
+**Prompt:**
+> "What other interesting activity happened on the day that the highly suspicious website [INSERT DOMAIN] was visited?"

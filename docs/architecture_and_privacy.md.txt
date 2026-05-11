@@ -1,0 +1,12 @@
+# BYOAI Architecture and Privacy 
+
+## The Read-Only Boundary
+A major concern in DFIR is the preservation of evidence. This integration utilizes a read-only Model Context Protocol (MCP) server. 
+* The GenAI client (e.g., Claude Desktop or LM Studio) acts as the middleman.
+* The LLM can query the parsed artifacts stored in the Autopsy/Cyber Triage database.
+* The LLM **cannot** modify, delete, or alter the original evidence.
+
+## Data Privacy via Local Models
+By swapping a cloud-based client for a local client like LM Studio, investigators can run models (like Llama 3 or Google Gemma) entirely on local hardware. 
+* Case data never leaves the air-gapped environment.
+* This satisfies strict compliance and regulatory requirements regarding sensitive incident data.

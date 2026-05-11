@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "cyber_triage": {
+      "command": "C:\\Program Files\\Cyber Triage\\bin\\cybertriage-mcp-stdio.exe",
+      "args": []
+    },
+    "autopsy": {
+      "command": "C:\\Program Files\\Autopsy\\autopsy-mcp-stdio.exe",
+      "args": []
+    }
+  }
+}
